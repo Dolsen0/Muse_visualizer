@@ -1,27 +1,23 @@
 export default class PlayPauseButton {
   constructor(audioPlayer) {
     this.audioPlayer = audioPlayer;
-    this.playButton = document.getElementById('play-button');
-    this.pauseButton = document.getElementById('play-button');
+    this.playPauseButton = document.getElementById('play-button');
     this.addEventListeners();
   }
 
   addEventListeners() {
-    this.playButton.addEventListener('click', () => {
+    this.playPauseButton.addEventListener('click', () => {
       if (this.audioPlayer.audioContext.state === 'suspended') {
         this.audioPlayer.audioContext.resume();
-      }
-    });
-
-    this.pauseButton.addEventListener('click', () => {
-      if (this.audioPlayer.audioContext.state === 'running') {
+        this.playPauseButton.textContent = '⏸'; // Pause symbol
+      } else if (this.audioPlayer.audioContext.state === 'running') {
         this.audioPlayer.audioContext.suspend();
+        this.playPauseButton.textContent = '▶'; // Play symbol
       }
     });
   }
 
   enableButtons() {
-    this.playButton.disabled = false;
-    this.pauseButton.disabled = false;
+    this.playPauseButton.disabled = false;
   }
 }

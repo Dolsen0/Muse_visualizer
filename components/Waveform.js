@@ -35,7 +35,7 @@ export default class Waveform {
   
       this.waveform.geometry.attributes.position.needsUpdate = true;
     }
-  }
+  };
   
   // Export the Waveform class for usage in other scripts
   if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {

@@ -5,9 +5,6 @@
     <link rel="stylesheet" href="./style.css">
   </head>
   <body>
-    <script src="https://threejs.org/build/three.js" type="module"></script>
-    <script src="./components/Waveform.js" type="module"></script>
-    <script src="main.js" type="module"></script>
     <div class="song-info">
       <h2 id="title"></h2>
       <p id="artist"></p>
@@ -15,7 +12,13 @@
     </div>
    
     <div id="controls">
-      <button id="play-button">⏯</button>
+      <button id="prev-button">⏮</button> <!-- "Previous song" button -->
+      <button id="play-button">⏯</button> <!-- Play/pause button -->
+      <button id="next-button">⏭</button> <!-- "Next song" button -->
     </div>
+
+    <script src="https://threejs.org/build/three.js"></script>
+    <script type="module" src="main.js"></script>
+
   </body>
 </html>
