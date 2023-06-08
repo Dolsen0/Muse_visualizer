@@ -5,6 +5,7 @@ import Waveform from './components/Waveform.js';
 import Visualizer from './components/Visualizer.js';
 import Metadata from './components/Metadata.js';
 import PlayPauseButton from './components/PlayPauseButton.js';
+import getRandomSong from './components/GetRandomSong.js';
 
 // Instantiate the components
 let scene = new Scene();
@@ -15,7 +16,12 @@ let metadata = new Metadata();
 let playPauseButton = new PlayPauseButton(audioPlayer);
 
 // Fetch the audio file
-const audioFileUrl = './assets/swan.mp3';
+const songPath = './assets/';
+const songs = ['swan.mp3', 'fur.mp3', 'moonlightFirst.mp3', 'moonlightThird,mp3', 'Noctorne.mp3', 'pathetique_full.mp3', 'swan.mp3'];  // Add as many songs as you have
+
+
+const audioFileUrl = getRandomSong();
+
 audioPlayer.fetchAudio(audioFileUrl)
   .then(audioBuffer => {
     metadata.update(audioBuffer, audioFileUrl);
