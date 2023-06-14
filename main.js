@@ -15,7 +15,7 @@ let waveform = new Waveform(scene, audioPlayer.analyser);
 let metadata = new Metadata();
 let playPauseButton = new PlayPauseButton(audioPlayer);
 
-let songs = ['swan.mp3', 'fur.mp3', 'moonlightFirst.mp3', 'moonlightThird.mp3', 'Nocturne.mp3', 'pathetique_full.mp3'];
+let songs = ['swan.mp3', 'fur.mp3', 'moonlightFirst.mp3', 'moonlightThird.mp3', 'Nocturne.mp3', 'pathetique_full.mp3', 'gypsyjazz.wav', 'ragtime.wav'];
 let playlist = new Playlist(songs, './assets/');
 
 function loadSong(songUrl) {
